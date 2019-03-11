@@ -47,6 +47,8 @@ class Graph:
         if wrong_edges:
             raise ValueError('Wrong edges data: {}'.format(wrong_edges))
         # dat ten cho tung thuoc tinh cua  edge
+        #lay tung canh trong danh sach canh va ap dung ham make_edge voi tung canh
+
         self.edges = [make_edge(*edge) for edge in edges]
 
     # thuoc tinh
@@ -133,11 +135,13 @@ def get_fitness(gen):
     for i in range(1, len(gen)):
         path_temp, dis_temp = graph.dijkstra(pre_step, gen[i])
         path.append(path_temp)
+        #dis la chi phi cost
         dis = dis + dis_temp
         pre_step = gen[i]
     return dis, path
 
 
+#ham dot bien 
 def mutate(parent):
     temp = parent[1: len(parent) - 1]
     random.shuffle(temp)
@@ -189,6 +193,8 @@ while True:
 
     # so_gen = so_gen + 1
     # print(len(gen_list))
+
+    #doan gay lap
     if so_gen >= gt and len(parent_temp) > 0:
         # gt = math.factorial(len(bestParent)-2)
         last_parent = parent_temp.pop()
