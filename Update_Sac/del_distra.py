@@ -3,6 +3,16 @@ from collections import deque, namedtuple
 import random
 import math
 from array import array
+import time
+
+
+def add(x, y):
+    return x + y
+
+# test
+start_time = time.time()
+
+
 
 da = pd.read_csv('data.csv')
 
@@ -173,6 +183,8 @@ def sac_pin(gen):
 # print(path_all)
 
 def display(gen):
+    end_time = time.time()
+    print 'total run-time: %f ms' % ((end_time - start_time) * 1000)
     print('\n________________\n')
     print('gen: ', gen)
     dis_p, path = get_fitness(gen)
