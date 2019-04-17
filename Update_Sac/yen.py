@@ -176,7 +176,7 @@ def display(gen):
     print('\n________________\n')
     print('gen: ', gen)
     dis_p, path = get_fitness(gen)
-    print('duong di: ', path)
+    #print('duong di: ', path)
     print('chi phi: ', dis_p)
     # print(dir(path))
 
