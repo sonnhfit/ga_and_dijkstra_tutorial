@@ -6,9 +6,6 @@ from array import array
 import time
 
 
-def add(x, y):
-    return x + y
-
 # test
 start_time = time.time()
 
