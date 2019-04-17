@@ -44,6 +44,7 @@ Edge = namedtuple('Edge', 'start, end, cost')
 def make_edge(start, end, cost=1):
     return Edge(start, end, cost)
 
+f= open("out.txt","w+")
 
 class Graph:
     def __init__(self, edges):
@@ -183,6 +184,7 @@ def display(gen):
     end_time = time.time()
     print 'total run-time: %f ms' % ((end_time - start_time) * 1000)
     print('\n________________\n')
+    f.write(gen)
     print('gen: ', gen)
     dis_p, path = get_fitness(gen)
     #print('duong di: ', path)
@@ -261,3 +263,4 @@ while True:
     #    break
     bestFitness = childFitness
     bestParent = new
+f.close()
