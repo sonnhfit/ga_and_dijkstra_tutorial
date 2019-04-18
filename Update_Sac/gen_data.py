@@ -2,7 +2,7 @@ import csv
 import random
 from random import randint
 
-array_label = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'l', 'm', 'o', 'i', 'u', 'y', 't', 'r', 'e', 'w', 'q', 's', 'x', 'z']
+array_label = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'k', 'l', 'm', 'n','p', 'v', 'o', 'i', 'u', 'y', 't', 'r', 'e', 'w', 'q', 's', 'x', 'z']
 
 
 def choice_to(array, from_el):
