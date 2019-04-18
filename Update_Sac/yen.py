@@ -3,6 +3,11 @@ from collections import deque, namedtuple
 import random
 import math
 from array import array
+import time
+
+
+# test
+start_time = time.time()
 
 da = pd.read_csv('data.csv')
 
@@ -178,6 +183,8 @@ def display(gen):
     dis_p, path = get_fitness(gen)
     #print('duong di: ', path)
     print('chi phi: ', dis_p)
+    end_time = time.time()
+    print ('Thoi gian chay code: %f ms' % ((end_time - start_time) * 1000))
     # print(dir(path))
 
 def add_tram_sac(gen, tram_sac):
@@ -198,8 +205,8 @@ def add_tram_sac(gen, tram_sac):
 
 # khoi tao quan parent
 #tap khach hang
-bestParent = ['a', 'c', 'b', 'h', 'e', 'a']
-sac = ['1', '2', '3']
+bestParent = ['q', 'x', 'p', 'g', 'f', 'q']
+sac = ['2', '3', '4']
 parent_temp = bestParent[1:len(bestParent) - 1]
 
 bestFitness, _ = get_fitness(bestParent)
