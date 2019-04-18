@@ -184,7 +184,7 @@ def display(gen):
     end_time = time.time()
     print ('total run-time: %f ms' % ((end_time - start_time) * 1000))
     print('\n________________\n')
-    f.write(gen)
+    f.write(str(gen))
     print('gen: ', gen)
     dis_p, path = get_fitness(gen)
     #print('duong di: ', path)
@@ -209,8 +209,8 @@ def add_tram_sac(gen, tram_sac):
 
 # khoi tao quan parent
 #tap khach hang
-bestParent = ['a', 'c', 'b', 'h', 'e', 'a']
-sac = ['1', '2', '3']
+bestParent = ['q', 'x', 'p', 'g', 'f', 'q']
+sac = ['2', '3', '4']
 parent_temp = bestParent[1:len(bestParent) - 1]
 
 bestFitness, _ = get_fitness(bestParent)
