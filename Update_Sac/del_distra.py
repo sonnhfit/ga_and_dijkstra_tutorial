@@ -182,7 +182,7 @@ def sac_pin(gen):
 
 def display(gen):
     end_time = time.time()
-    print 'total run-time: %f ms' % ((end_time - start_time) * 1000)
+    print ('total run-time: %f ms' % ((end_time - start_time) * 1000))
     print('\n________________\n')
     f.write(gen)
     print('gen: ', gen)
