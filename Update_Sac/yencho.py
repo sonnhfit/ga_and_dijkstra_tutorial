@@ -246,14 +246,14 @@ while True:
     childFitness, my_p = get_fitness(new)
     if childFitness > bestFitness:
         continue
-    if deque([]) in my_p:
-        pass
-    else:
-        display(new)
+    #     if deque([]) in my_p:
+    #         pass
+    #     else:
+    display(new)
     pre_dis = childFitness
     
-    if sac_pin(new):
-        new = add_tram_sac(new, sac)
+    #     if sac_pin(new):
+    #         new = add_tram_sac(new, sac)
         
     # if so_gen > 10:
     #    break
