@@ -138,7 +138,7 @@ PIN = 57
 def get_fitness(gen):
     pre_step = gen[0]
     path = []
-    dis = random.randint(4,101)
+    dis = random.randint(75,201)
     return dis, None
 
 
