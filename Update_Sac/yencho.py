@@ -66,7 +66,7 @@ f= open("out.txt","w+")
 #                 ([edge.start, edge.end] for edge in self.edges), []
 #             )
 #         )
-
+list_neighbours_of_gen = [i for i in range(15)]
 #     def get_node_pairs(self, n1, n2, both_ends=True):
 #         if both_ends:
 #             node_pairs = [[n1, n2], [n2, n1]]
@@ -98,7 +98,11 @@ f= open("out.txt","w+")
 #             neighbours[edge.start].add((edge.end, edge.cost))
 
 #         return neighbours
-
+def get_total_cost_from_gen(gen):
+    _a  = 0
+    for i in len(gen):
+        _a += list_neighbours_of_gen[random.randint(0,9)]
+    return _a += random.randint(75,201)
 #     def dijkstra(self, source, dest):
 #         assert source in self.vertices, 'Such source node doesn\'t exist'
 #         distances = {vertex: inf for vertex in self.vertices}
@@ -130,6 +134,7 @@ f= open("out.txt","w+")
 #         return path, distances[dest]
 
 
+        
 # graph = (trunggian)
 PIN = 57
 
@@ -138,8 +143,8 @@ PIN = 57
 def get_fitness(gen):
     pre_step = gen[0]
     path = []
-    dis = random.randint(75,201)
-    return dis, None
+    cost = get_total_cost_from_gen(gen)
+    return cost, None
 
 
 def mutate(parent):
