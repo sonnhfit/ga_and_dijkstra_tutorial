@@ -102,7 +102,8 @@ def get_total_cost_from_gen(gen):
     _a  = 0
     for i in len(gen):
         _a += list_neighbours_of_gen[random.randint(0,9)]
-    return _a += random.randint(75,201)
+    _a += random.randint(75,201)
+    return _a
 #     def dijkstra(self, source, dest):
 #         assert source in self.vertices, 'Such source node doesn\'t exist'
 #         distances = {vertex: inf for vertex in self.vertices}
