@@ -100,7 +100,7 @@ list_neighbours_of_gen = [i for i in range(15)]
 #         return neighbours
 def get_total_cost_from_gen(gen):
     _a  = 0
-    for i in len(gen):
+    for i in range(len(gen)):
         _a += list_neighbours_of_gen[random.randint(0,9)]
     _a += random.randint(75,201)
     return _a
