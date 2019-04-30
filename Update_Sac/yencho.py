@@ -57,7 +57,9 @@ f= open("out.txt","w+")
 #             raise ValueError('Wrong edges data: {}'.format(wrong_edges))
 #         # dat ten cho tung thuoc tinh cua  edge
 #         self.edges = [make_edge(*edge) for edge in edges]
-
+def cost_khi_sac():
+    a = [i for i in range(10)]
+    return random.randint(75,201) #random cost khi sạc
 #     # thuoc tinh
 #     @property
 #     def vertices(self):
@@ -67,6 +69,7 @@ f= open("out.txt","w+")
 #             )
 #         )
 list_neighbours_of_gen = [i for i in range(15)]
+time.sleep(10)
 #     def get_node_pairs(self, n1, n2, both_ends=True):
 #         if both_ends:
 #             node_pairs = [[n1, n2], [n2, n1]]
@@ -102,7 +105,7 @@ def get_total_cost_from_gen(gen):
     _a  = 0
     for i in range(len(gen)):
         _a += list_neighbours_of_gen[random.randint(0,9)]
-    _a += random.randint(75,201)
+    _a += cost_khi_sac()
     return _a
 #     def dijkstra(self, source, dest):
 #         assert source in self.vertices, 'Such source node doesn\'t exist'
